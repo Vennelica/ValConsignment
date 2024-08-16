@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValConsignment</title>
+    <link rel="shortcut icon" href="img/banner/valconsignment.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+<section id="header">
+    <a href="#" class="logo"><img src="img/banner/valconsignment.png" height="85" alt="">ValConsignment</a>
+
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="topup.html">Top Up</a></li>
+            <li><a class="active" href="jokirank.html">Joki Rank</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="jokirank" class="joki">
+    <section class="card-content">
+      <section class="card joki">
+        <div class="header-card joki">
+          <h3>BUAT ORDERAN</h3>
+          <div class="separator"></div>
+        </div>
+
+        <div class="main-content">
+          <div class="content-rank">
+                          <div class="box-rank">
+                              <h4>Pilih Rank Awal</h4>
+                              <div class="custom-select-wrapper">
+                                  <select class="custom-select" id="rank-awal">
+                                      <option value="0">Pilih Rank</option>
+                                      <option value="iron">Iron</option>
+                                      <option value="bronze">Bronze</option>
+                                      <option value="silver">Silver</option>
+                                      <option value="gold">Gold</option>
+                                      <option value="diamond">Diamond</option>
+                                      <option value="ascendant">Ascendant</option>
+                                  </select>
+                              </div>
+                              <img src="img/rank/iron3.png" alt="iron" id="rank-awal">
+                          </div>
+
+                          <div class="box-rank">
+                              <h4>Pilih Rank Tujuan</h4>
+                              <select class="custom-select" id="rank-tujuan">
+                                  <option value="0">Pilih Rank</option>
+                                  <option value="iron">Iron</option>
+                                  <option value="bronze">Bronze</option>
+                                  <option value="silver">Silver</option>
+                                  <option value="gold">Gold</option>
+                                  <option value="diamond">Diamond</option>
+                                  <option value="ascendant">Ascendant</option>
+                              </select>
+
+                              <h4>Pilih Server</h4>
+                              <select class="custom-select">
+                                  <option value="0">Asia</option>
+                              </select>
+                              <img src="img/rank/iron3.png" alt="iron" id="rank-tujuan">
+                          </div>
+                      </div>
+
+                      <div class="metode-pembayaran">
+                          <h4>Pilih Metode Pembayaran</h4>
+                          <div class="custom-select-wrapper">
+                              <select class="custom-select">
+                                  <option value="0">Pilih Pembayaran</option>
+                                  <option value="qriss">(E-Money) Qriss</option>
+                                  <option value="qriss">(E-Money) Dana</option>
+                                  <option value="qriss">(E-Money) OVO</option>
+                                  <option value="qriss">(E-Money) Gopay</option>
+                                  <option value="qriss">(Retail) ALFAMART, PEGADAIAN, POS, DAN DAN</option>
+                              </select>
+                          </div>
+
+                          <div class="additional">
+                              <div class="line-text">
+                                  <div class="line-short"></div>
+                                  <h4 class="text">ADD ON</h4>
+                                  <div class="line-long"></div>
+                              </div>
+                              <div class="box-addition">
+                                  <h5>TV PROSES</h5>
+                                  <div class="custom-select-wrapper">
+                                      <select class="custom-select">
+                                          <option value="0">Normal</option>
+                                          <option value="1">Cepat (1-2 Hari)</option>
+                                          <option value="2">Kilat (1 Hari)</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="box-addition">
+                                  <h5>TV AGENT</h5>
+                                  <button id="openAgent">PILIH</button>
+                              </div>
+                              <div class="form-btn">
+                                  <input type="text" placeholder="Kode Voucher">
+                                  <button>CEK</button>
+                              </div>
+                          </div>
+
+                          <div class="additional">
+                              <div class="line-text">
+                                  <div class="line-short"></div>
+                                  <h4 class="text">TOTAL</h4>
+                                  <div class="line-long"></div>
+                              </div>
+                              <div class="box-addition">
+                                  <h5>Subtotal</h5>
+                                  <h5>Rp 500.000</h4>
+                              </div>
+                              <div class="box-addition">
+                                  <h5>TV Proses</h5>
+                                  <h5>Rp 50.000</h4>
+                              </div>
+                              <div class="box-addition">
+                                  <h5>TV AGENT</h5>
+                                  <h5>Rp10.000</h4>
+                              </div>
+                              <div class="box-addition">
+                                  <h5>Diskon</h5>
+                                  <h5>Rp 0</h4>
+                              </div>
+                              <div class="box-addition">
+                                  <h5>Total</h5>
+                                  <h5 class="total">Rp 560.000</h4>
+                              </div>
+                          </div>
+
+                          <button id="btn-checkout-joki" class="btn-checkout joki">CHECKOUT</button>
+                      </div>
+        </div>
+      </section>
+    </section>
+      </section>
+
+      <!-- Start Modal Agent -->
+		<div id="modalAgent" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span id="closeModalBtn" class="close">&times;</span>
+					<p>PILIH / REQUEST AGENT</p>
+				</div>
+				<div class="box-agent">
+					<div class="agent">
+						<img src="img/agent/phonix.png" alt="Phoenix">
+						<h4>Phoenix</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+					<div class="agent">
+						<img src="img/agent/sage.png" alt="Sage">
+						<h4>Sage</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+					<div class="agent">
+						<img src="img/agent/sova.png" alt="Sova">
+						<h4>Sova</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+					<div class="agent">
+						<img src="img/agent/viper.png" alt="Viper">
+						<h4>Viper</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+					<div class="agent">
+						<img src="img/agent/skye.png" alt="Skye">
+						<h4>Skey</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+					<div class="agent">
+						<img src="img/agent/omen.png" alt="Omen">
+						<h4>Omen</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+					<div class="agent">
+						<img src="img/agent/reyna.png" alt="Reyna">
+						<h4>Reyna</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+				</div>
+				<button class="btn-pilih-agent">PILIH AGENT</button>
+			</div>
+    </div>
+		<!-- End Modal -->
+
+        <!-- Start Modal CheckOut -->
+<div id="modalCheckOut" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <p>RINCIAN ORDER</p>
+        </div>
+        <div class="box-order">
+            <div class="order-rank">
+                <img src="img/rank/iron1.png" alt="Rank" id="modal-img-rank-awal">
+                <h4>To</h4>
+                <img src="img/rank/iron1.png" alt="Rank" id="modal-img-rank-tujuan">
+            </div>
+            <div class="form-order">
+                <article class="content-card">
+                    <h6>Username</h6>
+                    <input type="text"/>
+                </article>
+                <article class="content-card">
+                    <h6>Password</h6>
+                    <input type="text"/>
+                    <h6 class="capt">
+                        Password akan terenkripsi end to end
+                    </h6>
+                </article>
+                <article class="content-card">
+                    <h6>Whatsapp</h6>
+                    <input type="text"/>
+                </article>
+            </div>
+        </div>
+        <button class="btn-buat-order">BUAT ORDERAN</button>
+    </div>
+</div>
+<!-- End Modal -->
+
+<footer class="section-p1">
+    <div class="col">
+        <h4>VALCONSIGNMENT</h4>
+        <h4>TOP UP & JOKI VALORANT TERPERCAYA</h4>
+        <div class="follow">
+            <h4>Follow us!</h4>
+            <div class="icon">
+                <a href="https://www.instagram.com/valconsignment/"><i class="fa-brands fa-instagram"></i></a>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h4>Halaman</h4>
+        <a href="index.html">Halaman Utama</a>
+        <a href="shop.html">Shop</a>
+        <a href="topup.html">Top Up</a>
+        <a href="jokirank.html">Joki Rank</a>
+        <a href="blog.html">Blog</a>
+    </div>
+
+    <div class="col">
+        <h4>Kontak</h4>
+        <i class="fa-brands fa-instagram"><a href="https://www.instagram.com/valconsignment/"> valconsignment</a></i>
+        <i class="fa-brands fa-whatsapp"> <a href="#"> +62123456789</a></i>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright © 2024 VALCONSIGNMENT. All Rights Reserved</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
